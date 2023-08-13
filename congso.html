@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="margin-left: 30px">Caculator</h2>
+
+
+<input style="margin-left: 30px" type="number" id="so a">
+<input style="margin-left: 20px" type="number" id="so b">
+<br>
+<br>
+<button style="margin-left: 30px" onclick="thuchiencong()" id="cong">Additinon+</button>
+<button style="margin-left: 10px" onclick="thuchientru()" id="tru">Subtration-</button>
+<button style="margin-left: 10px" onclick="thuchiennhan()" id="nhan">MultiplicationX</button>
+<button style="margin-left: 10px" onclick="thuchienchia()" id="chia">Division/</button>
+
+
+<p id="bang">Resuld</p>
+<script>
+    function thuchiencong() {
+        let donvi1 = +document.getElementById('so a').value;
+        let donvi2 = +document.getElementById('so b').value;
+        let ketqua = donvi1 + donvi2
+        document.getElementById('bang').innerHTML = 'Ressuld: ' + ketqua;
+
+
+    }
+
+    function thuchientru() {
+        let donvi1 = +document.getElementById('so a').value;
+        let donvi2 = +document.getElementById('so b').value
+        let ketqua = donvi1 - donvi2
+        document.getElementById('bang').innerHTML = 'Ressuld: ' + ketqua;
+
+
+    }
+
+    function thuchiennhan() {
+        let donvi1 = +document.getElementById('so a').value;
+        let donvi2 = +document.getElementById('so b').value
+        let ketqua = donvi1 * donvi2
+        document.getElementById('bang').innerHTML = 'Ressuld: ' + ketqua;
+
+
+    }
+
+    function thuchienchia() {
+        let donvi1 = +document.getElementById('so a').value;
+        let donvi2 = +document.getElementById('so b').value
+        let ketqua = donvi1 / donvi2
+        document.getElementById('bang').innerHTML = 'Ressuld: ' + ketqua;
+
+    }
+</script>
+</body>
+</html>

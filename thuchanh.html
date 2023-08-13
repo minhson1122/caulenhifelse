@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let tentaikhoan = prompt('tuy y nhap')
+    // if (tentaikhoan == 'leson') {
+    // }
+    // let matkhau = prompt('tuy y nhap')
+    // if (matkhau == 'minhson') {
+    //     alert('xin moi vao')
+    // } else if (matkhau == null)
+    //     alert('sai nat khau')
+    //  else {
+    //     alert('loi')
+    // }
+
+    let userName = prompt("Who's there?", '');
+    if (userName == 'Admin') {
+        let pass = prompt('Password?', '');
+        if (pass == 'TheMaster') {
+            alert('Welcome!');
+        } else if (pass == null) {
+            alert('Canceled.');
+        } else {
+            alert('Wrong password');
+        }
+    } else if (userName == null) {
+        alert('Canceled');
+    } else {
+        alert("I don't know you");
+    }
+</script>
+</body>
+</html>

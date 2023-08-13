@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuen doi tien te</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="money"></td>
+        <td>
+            <select id="from">
+                <option value="Vnd">Việt Nam</option>
+                <option value="Usd">Mỹ</option>
+            </select>
+        </td>
+        <td>
+            <select id="to">
+                <option value="Usd">Mỹ</option>
+                <option value="Vnd">Việt Nam</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="ketqua()" id="ket qua">Convert</button>
+        </td>
+    </tr>
+</table>
+<p id="bang">Resuld</p>
+<script>
+    function ketqua() {
+        let sotien = +document.getElementById('money').value
+        let from = document.getElementById('from').value
+        let to = document.getElementById('to').value
+        if (from === 'Vnd' && to === 'Usd') {
+            let a = sotien / 23000;
+            document.getElementById('bang').innerHTML = 'bang: ' + a + 'Usd';
+
+        }
+        if (from === 'Usd' && to === 'Vnd') {
+            let b = sotien * 23000;
+            document.getElementById('bang').innerHTML = 'bang: ' + b + 'Vnd';
+
+        }
+        if (from === to) {
+            let c = sotien;
+            document.getElementById('bang').innerHTML = 'bang: ' + c + to;
+        }
+    }
+
+
+</script>
+</body>
+</html>
